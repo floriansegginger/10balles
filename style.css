@@ -1,0 +1,196 @@
+:root {
+    --red: #d72a1b;
+	--white: #fff;
+	--black: #000;
+	--gray: #444;
+	--big-pad: 16px;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*************************************/
+
+.center {
+	text-align: center;
+}
+
+.justify {
+	text-align: justify;
+}
+
+.justify h1 {
+	text-align: left;
+}
+
+header, section, footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	padding: var(--big-pad);
+}
+
+/*************************************/
+
+html {
+	background-color: var(--red);
+}
+
+h1 {
+	font-size: 3em;
+	line-height: 1.2em;
+	margin: var(--big-pad);
+} 
+
+p {
+	font-size: 1.2em;
+	line-height: 1.2em;
+	margin: var(--big-pad);
+}
+
+strong {
+	font-weight: bold;
+}
+
+ul {
+	padding-left: var(--big-pad);
+}
+
+ul li {
+	list-style-position: inside;
+	font-size: 1.2em;
+ }
+ 
+
+/*************************************/
+
+a.btn, a.btn:hover, a.btn:visited, a.btn:focus {
+	text-decoration: none;
+	color: inherit;
+	padding: var(--big-pad);
+	display: inline-block;
+
+	border: 1px solid;
+	border-radius: 5px;
+
+	text-align: center;
+}
+
+.btn-white-on-red {
+	background-color: var(--red);
+	border-color: var(--white);
+}
+
+.btn-red-on-white {
+	border-color: var(--red);
+	background-color: var(--red);
+	color: var(--white) !important;
+}
+
+.btn-big {
+	margin: var(--big-pad);
+	font-size: 1.5em;
+}
+
+/*************************************/
+
+.container {
+	max-width: 100%;
+	width: 1024px
+}
+
+header {
+	background: var(--red);
+
+	color: var(--white);
+	min-height: 70vh;
+}
+
+header:before {
+	content: '';
+	position: fixed;
+	height: 999px;
+	top: -999px;
+	width: 100%;
+	background-color: var(--red);
+}
+
+header .logo {
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+section {
+	background-color: var(--white);
+	text-align: left;
+}
+
+footer {
+	background: var(--red);
+
+	color: var(--white);
+	min-height: 150px;
+}
+
+table {
+	width: calc(100% - var(--big-pad) * 2);
+	margin: var(--big-pad);
+	border-collapse: collapse;
+}
+
+table tbody tr td, table thead tr th {
+	padding: var(--big-pad);
+	border: 1px solid var(--gray);
+	font-size: 1.2em;
+}
+
+table thead tr th {
+	background-color: var(--red);
+	color: var(--white);
+	font-weight: bold;
+}
