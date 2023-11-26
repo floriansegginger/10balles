@@ -3,7 +3,8 @@
 	--white: #fff;
 	--black: #000;
 	--gray: #444;
-	--big-pad: 16px;
+	--big-pad: 32px;
+	--small-pad: 16px;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -72,7 +73,7 @@ header, section, footer {
 	align-items: center;
 	justify-content: center;
 
-	padding: var(--big-pad);
+	padding: var(--small-pad);
 }
 
 /*************************************/
@@ -82,15 +83,21 @@ html {
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 2.3em;
 	line-height: 1.2em;
-	margin: var(--big-pad);
+	margin: var(--big-pad) var(--small-pad);
+} 
+
+h2 {
+	font-size: 2em;
+	line-height: 1.em;
+	margin: var(--big-pad) var(--small-pad);
 } 
 
 p {
 	font-size: 1.2em;
 	line-height: 1.2em;
-	margin: var(--big-pad);
+	margin: var(--big-pad) var(--small-pad);
 }
 
 strong {
@@ -98,12 +105,17 @@ strong {
 }
 
 ul {
-	padding-left: var(--big-pad);
+	padding-left: var(--small-pad);
 }
 
 ul li {
 	list-style-position: inside;
 	font-size: 1.2em;
+	padding: calc(var(--small-pad) / 2);
+ }
+
+ a, a:hover, a:visited, a:active {
+	color: inherit;
  }
  
 /*************************************/
@@ -126,7 +138,7 @@ and (max-device-width : 480px) {
 a.btn, a.btn:hover, a.btn:visited, a.btn:focus {
 	text-decoration: none;
 	color: inherit;
-	padding: var(--big-pad);
+	padding: var(--small-pad);
 	display: inline-block;
 
 	border: 1px solid;
@@ -147,7 +159,7 @@ a.btn, a.btn:hover, a.btn:visited, a.btn:focus {
 }
 
 .btn-big {
-	margin: var(--big-pad);
+	margin: var(--small-pad);
 	font-size: 1.5em;
 }
 
@@ -192,19 +204,26 @@ footer {
 }
 
 table {
-	width: calc(100% - var(--big-pad) * 2);
-	margin: var(--big-pad);
+	width: calc(100% - var(--small-pad) * 2);
+	margin: var(--big-pad) var(--small-pad);
 	border-collapse: collapse;
 }
 
 table tbody tr td, table thead tr th {
-	padding: var(--big-pad);
+	padding: var(--small-pad);
 	border: 1px solid var(--gray);
 	font-size: 1.2em;
+	text-align: center;
 }
 
 table thead tr th {
 	background-color: var(--red);
 	color: var(--white);
 	font-weight: bold;
+}
+
+hr {
+	border-color: #ccc;
+	width: 70%;
+	margin: var(--big-pad) auto;
 }
