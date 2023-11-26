@@ -130,6 +130,9 @@ and (max-device-width : 480px) {
 	h1 {
 		font-size: 1.6em;
 	}
+	table tbody tr td, table thead tr th {
+		font-size: 0.9em !important;
+	}
 }
 
 
